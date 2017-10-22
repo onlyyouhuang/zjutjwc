@@ -1,7 +1,7 @@
 package com.zjut.jwc.entity;
 
 public class Students {
-    private int sno;
+    private String sno;
     private String sname;
     private String ssex;
     private String sbirthdate;
@@ -10,7 +10,7 @@ public class Students {
     public Students() {
     }
 
-    public Students(int sno, String sname, String ssex, String sbirthdate, String mno) {
+    public Students(String sno, String sname, String ssex, String sbirthdate, String mno) {
         this.sno = sno;
         this.sname = sname;
         this.ssex = ssex;
@@ -18,11 +18,11 @@ public class Students {
         this.mno = mno;
     }
 
-    public int getSno() {
+    public String getSno() {
         return sno;
     }
 
-    public void setSno(int sno) {
+    public void setSno(String sno) {
         this.sno = sno;
     }
 

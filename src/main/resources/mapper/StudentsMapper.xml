@@ -9,4 +9,15 @@
         </if>
     </select>
 
+    <delete id="deleteStudent">
+        delete from Students where Sno = #{sno}
+    </delete>
+
+    <select id="getStudentSname" resultType="string">
+        SELECT Sname FROM Students WHERE Sno = #{sno}
+    </select>
+
+    <update id="updateStudentSname">
+        update Students set Sname = #{sname} WHERE Sno = #{sno}
+    </update>
 </mapper>

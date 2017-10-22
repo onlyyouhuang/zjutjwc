@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zjut.jwc.dao.CoursesDao">
+
+    <select id="getCourseCname" resultType="string">
+        SELECT Cname FROM Courses WHERE Cno = #{cno}
+    </select>
+
+    <update id="updateCourseCname">
+        update Courses set Cname = #{cname} WHERE Cno = #{cno}
+    </update>
+
+    <select id="getCourseCredits" resultType="string">
+        SELECT Credits FROM Courses WHERE Cno = #{cno}
+    </select>
+
+    <update id="updateCourseCredits">
+        update Courses set Credits = #{credits} WHERE Cno = #{cno}
+    </update>
+
+    <delete id="deleteCourse">
+        delete from Courses where Cno = #{cno}
+    </delete>
+</mapper>

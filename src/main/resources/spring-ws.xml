@@ -28,6 +28,7 @@
         <!--serviceBeans：暴露的WebService服务类-->
         <jaxrs:serviceBeans>
             <ref bean="studentsService"/>
+            <ref bean="coursesService"/>
         </jaxrs:serviceBeans>
             
         <!--支持的数据格式-->

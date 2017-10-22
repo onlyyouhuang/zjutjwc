@@ -2,10 +2,7 @@ package com.zjut.jwc.service;
 
 import com.zjut.jwc.entity.Students;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -14,10 +11,23 @@ import java.util.List;
 public interface StudentsService {
 
     @GET
-    @Path("/getStudent/{sno}")
-    public Students getStudent(@PathParam("sno") String sno);
+    @Path("/students")
+    List<Students> getAllStudents();
 
     @GET
-    @Path("/getAllStudents")
-    public List<Students> getAllStudents();
+    @Path("/student/{sno}")
+    Students getStudent(@PathParam("sno") String sno);
+
+    @DELETE
+    @Path("/student/{sno}")
+    int deleteStudent(@PathParam("sno") String sno);
+
+    @GET
+    @Path("/student/sname/{sno}")
+    String getStudentSname(@PathParam("sno") String sno);
+
+    @PUT
+    @Path("/student/sname/{sno}/{sname}")
+    int updateStudentSname(@PathParam("sno") String sno, @PathParam("sname") String sname);
+
 }
